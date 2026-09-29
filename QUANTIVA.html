@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>QUANTIVA — Calculadoras útiles para empresas, profesionales e industrias</title>
+<meta name="description" content="Calcula costos, rentabilidad, productividad y finanzas con calculadoras claras que muestran fórmula y supuestos.">
+<link rel="canonical" href="https://tudominio.com/">
+<meta property="og:title" content="QUANTIVA"><meta property="og:description" content="Calcula. Comprende. Decide.">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f5f6f8;--card:#fff;--ink:#14213d;--mut:#5b6577;--line:#e2e6ed;--ac:#1746d1;--ok:#0b7a5c;--bad:#b3261e;--sh:0 1px 3px rgba(20,33,61,.08);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0e1524;--card:#16203a;--ink:#e8edf7;--mut:#9aa6bd;--line:#26314d;--ac:#6f93ff;--ok:#4cc9a0;--bad:#ff8a80}}
+:root[data-theme=dark]{--bg:#0e1524;--card:#16203a;--ink:#e8edf7;--mut:#9aa6bd;--line:#26314d;--ac:#6f93ff;--ok:#4cc9a0;--bad:#ff8a80}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Inter,system-ui,sans-serif}
+h1,h2,h3,.logo{font-family:Sora,Inter,sans-serif;line-height:1.2}
+a{color:var(--ac)}:focus-visible{outline:3px solid var(--ac);outline-offset:2px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--card);border-bottom:1px solid var(--line);display:flex;align-items:center;gap:12px;padding:10px 16px;flex-wrap:wrap}
+.logo{font-weight:700;font-size:20px;text-decoration:none;color:var(--ink);display:flex;align-items:center;gap:8px}
+nav{display:flex;gap:4px;flex:1;flex-wrap:wrap}nav a{padding:6px 10px;border-radius:8px;text-decoration:none;color:var(--mut);font-weight:600;font-size:14px}nav a:hover{background:var(--bg)}
+button,select,input{font:inherit;color:inherit}
+.btn{border:1px solid var(--line);background:var(--card);border-radius:10px;padding:10px 16px;cursor:pointer;min-height:44px}
+.btn.p{background:var(--ac);border-color:var(--ac);color:#fff;font-weight:600}
+main{max-width:1000px;margin:0 auto;padding:24px 16px 48px;overflow-x:hidden}
+.hero{padding:32px 0 8px}.hero h1{font-size:clamp(28px,5vw,44px);margin:0 0 12px;max-width:16em}.hero p{color:var(--mut);max-width:40em}
+.tag{font-family:Sora;font-weight:700;color:var(--ac)}
+input,select{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:10px;background:var(--card);min-height:44px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px;margin:16px 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;box-shadow:var(--sh)}
+a.card{display:block;text-decoration:none;color:inherit}a.card:hover{border-color:var(--ac)}
+.card h3{margin:6px 0;font-size:16px}.card p{margin:0;color:var(--mut);font-size:14px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}.chip{border:1px solid var(--line);background:var(--card);border-radius:99px;padding:6px 14px;cursor:pointer;min-height:36px}.chip.on{background:var(--ink);color:var(--bg)}
+form{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}label{font-size:14px;font-weight:600;display:grid;gap:4px}
+.res{border-left:5px solid var(--ok);margin-top:16px}.res .big{font-family:Sora;font-size:34px;font-weight:700}
+.err{border-left:5px solid var(--bad);color:var(--bad);margin-top:16px}
+.tw{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:14px}td,th{padding:6px 10px;border-bottom:1px solid var(--line);text-align:right}th:first-child,td:first-child{text-align:left}
+.ad{border:1px dashed var(--line);color:var(--mut);font-size:12px;text-align:center;padding:10px;margin:24px 0;border-radius:8px}
+footer{border-top:1px solid var(--line);padding:24px 16px;color:var(--mut);font-size:13px;text-align:center}
+details{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 16px;margin:8px 0}summary{cursor:pointer;font-weight:600}
+@media(prefers-reduced-motion:no-preference){.res{animation:in .3s}@keyframes in{from{opacity:0;transform:translateY(6px)}}}
+</style></head><body>
+<!-- ADSENSE: INSERTAR CÓDIGO OFICIAL CUANDO EL SITIO SEA APROBADO -->
+<header>
+<a class="logo" href="#inicio" aria-label="QUANTIVA inicio"><svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><circle cx="13" cy="13" r="9" fill="none" stroke="var(--ac)" stroke-width="4"/><path d="M16 16l8 8" stroke="var(--ac)" stroke-width="4" stroke-linecap="round"/></svg>QUANTIVA</a>
+<nav id="nav" aria-label="Principal"><a href="#inicio">Inicio</a><a href="#calculadoras">Calculadoras</a><a href="#como">Cómo funciona</a><a href="#favoritos">Favoritos</a><a href="#faq">FAQ</a></nav>
+<select id="cur" aria-label="Moneda" style="width:auto"></select>
+<button class="btn" id="th" aria-label="Cambiar tema">🌓</button>
+</header>
+<main id="app"></main>
+<footer>QUANTIVA proporciona herramientas de cálculo con fines informativos y educativos. Los resultados dependen de los datos introducidos, las fórmulas y los supuestos indicados, y no sustituyen la revisión de un profesional cualificado en materias legales, de ingeniería, contabilidad, tributación, agricultura o energía.<br>
+<a href="#legal-privacidad">Privacidad</a> · <a href="#legal-terminos">Términos</a> · <a href="#legal-cookies">Cookies</a> · <a href="#contacto">Contacto</a></footer>
+<script>
+const EMAIL='contacto@tudominio.com';
+const CATS={emp:['💼','Empresas','Márgenes, ROI y crecimiento'],rrhh:['👥','Recursos Humanos','Salario y rotación'],ind:['🏭','Industria','Eficiencia y merma'],con:['🏗️','Construcción','Materiales y volúmenes'],log:['🚚','Logística','Combustible y transporte'],ene:['⚡','Energía','Consumo y costo eléctrico'],agr:['🌾','Agricultura','Rendimiento por hectárea'],fin:['💰','Finanzas','Préstamos e interés']};
+const need=(c,m)=>{if(!c)throw Error(m)};
+const C=[
+{id:'margen',cat:'emp',name:'Calculadora de margen de ganancia',d:'Ganancia y margen sobre el precio de venta.',kw:'margen ganancia utilidad',f:[['p','Precio de venta','$'],['c','Costo','$']],
+ calc:(v,F)=>{need(v.p!==0,'El precio de venta no puede ser cero.');const g=v.p-v.c,m=g/v.p*100;return{t:'Margen de ganancia',big:F.p(m),rows:[['Ganancia',F.m(g)]],why:m<0?'Vendes por debajo del costo: hay pérdida.':`Tu ganancia representa el ${F.p(m)} del precio de venta.`}},
+ fm:'Margen = (Precio − Costo) / Precio × 100',as:'El margen se calcula sobre el precio de venta, no sobre el costo.',ex:'Precio 100, costo 60 → ganancia 40, margen 40 %.'},
+{id:'markup',cat:'emp',name:'Calculadora de markup',d:'Recargo sobre el costo y precio resultante.',kw:'markup recargo precio de venta',f:[['c','Costo','$'],['g','Ganancia deseada','$']],
+ calc:(v,F)=>{need(v.c>0,'El costo debe ser mayor que cero.');const k=v.g/v.c*100;return{t:'Markup',big:F.p(k),rows:[['Precio de venta',F.m(v.c+v.g)],['Margen equivalente',F.p(v.g/(v.c+v.g)*100)]],why:`Sumas el ${F.p(k)} sobre el costo. Markup y margen no son lo mismo.`}},
+ fm:'Markup = Ganancia / Costo × 100;  Precio = Costo × (1 + Markup/100)',as:'El markup se calcula sobre el costo.',ex:'Costo 60, ganancia 40 → markup 66,67 %, margen 40 %.'},
+{id:'roi',cat:'emp',name:'Calculadora de ROI',d:'Retorno de una inversión.',kw:'roi retorno inversión rentabilidad',f:[['i','Inversión inicial','$'],['v','Valor final','$']],
+ calc:(v,F)=>{need(v.i>0,'La inversión inicial debe ser mayor que cero.');const g=v.v-v.i,r=g/v.i*100;return{t:'ROI',big:F.p(r),rows:[['Ganancia',F.m(g)]],why:r<0?'El resultado negativo indica una pérdida.':`Por cada unidad invertida obtuviste ${(r/100).toFixed(2)} de ganancia.`}},
+ fm:'ROI = (Valor final − Inversión) / Inversión × 100',as:'No se anualiza el resultado.',ex:'Inversión 1000, valor final 1250 → ROI 25 %.'},
+{id:'equilibrio',cat:'emp',name:'Calculadora de punto de equilibrio',d:'Unidades y ventas para cubrir costos.',kw:'punto equilibrio costos fijos',f:[['cf','Costos fijos','$'],['p','Precio unitario','$'],['cv','Costo variable unitario','$']],
+ calc:(v,F)=>{need(v.p>v.cv,'El precio debe ser mayor que el costo variable unitario.');const u=v.cf/(v.p-v.cv);return{t:'Punto de equilibrio',big:F.x(Math.ceil(u))+' u.',rows:[['Unidades exactas',F.x(u)],['Ventas necesarias',F.m(u*v.p)]],why:'Desde esa cantidad de unidades dejas de perder y empiezas a ganar.'}},
+ fm:'PE = Costos fijos / (Precio − Costo variable)',as:'Precio, costo variable y costos fijos constantes; relación lineal.',ex:'CF 1000, precio 50, CV 30 → 50 unidades.'},
+{id:'crecimiento',cat:'emp',name:'Calculadora de crecimiento y CAGR',d:'Crecimiento total y anual compuesto.',kw:'crecimiento cagr empresarial',f:[['a','Valor inicial','$'],['b','Valor final','$'],['n','Períodos (opcional)','#','o']],
+ calc:(v,F)=>{need(v.a>0,'El valor inicial debe ser mayor que cero.');const r=[];if(v.n>0)r.push(['CAGR por período',F.p((Math.pow(v.b/v.a,1/v.n)-1)*100)]);return{t:'Crecimiento',big:F.p((v.b-v.a)/v.a*100),rows:r,why:'Variación porcentual entre el valor inicial y el final.'}},
+ fm:'Crecimiento = (Final − Inicial)/Inicial × 100;  CAGR = (Final/Inicial)^(1/n) − 1',as:'CAGR supone crecimiento constante por período.',ex:'100 → 121 en 2 períodos: 21 %, CAGR 10 %.'},
+{id:'salario-hora',cat:'rrhh',name:'Calculadora de salario por hora',d:'Valor de la hora a partir del salario del período.',kw:'salario hora sueldo',f:[['s','Salario del período','$'],['h','Horas trabajadas en el período','h']],
+ calc:(v,F)=>{need(v.h>0,'Las horas deben ser mayores que cero.');return{t:'Salario por hora',big:F.m(v.s/v.h),rows:[],why:'Es lo que cuesta cada hora trabajada.'}},
+ fm:'Salario por hora = Salario / Horas',as:'No se asume legislación laboral de ningún país.',ex:'Salario 2000 en 160 h → 12,50 por hora.'},
+{id:'rotacion',cat:'rrhh',name:'Calculadora de rotación de empleados',d:'Porcentaje de salidas sobre el promedio de plantilla.',kw:'rotación empleados tasa',f:[['i','Empleados iniciales','#'],['e','Empleados finales','#'],['s','Empleados que salieron','#']],
+ calc:(v,F)=>{const pr=(v.i+v.e)/2;need(pr>0,'El promedio de empleados debe ser mayor que cero.');return{t:'Rotación',big:F.p(v.s/pr*100),rows:[['Promedio de empleados',F.x(pr)]],why:'Proporción de la plantilla que salió en el período.'}},
+ fm:'Rotación = Salidas / ((Iniciales + Finales)/2) × 100',as:'Solo cuenta salidas; no distingue voluntarias o no.',ex:'50 y 50, 5 salidas → 10 %.'},
+{id:'eficiencia',cat:'ind',name:'Calculadora de eficiencia de producción',d:'Producción real frente a la esperada.',kw:'eficiencia producción industrial rendimiento',f:[['r','Producción real','u'],['e','Producción esperada','u']],
+ calc:(v,F)=>{need(v.e>0,'La producción esperada debe ser mayor que cero.');return{t:'Eficiencia',big:F.p(v.r/v.e*100),rows:[],why:'Porcentaje de lo esperado que realmente se produjo. No es OEE.'}},
+ fm:'Eficiencia = Real / Esperada × 100',as:'Eficiencia simple, no OEE.',ex:'90 de 100 → 90 %.'},
+{id:'merma',cat:'ind',name:'Calculadora de merma',d:'Pérdida de material en un proceso.',kw:'merma desperdicio pérdida',f:[['i','Cantidad inicial','u'],['f','Cantidad final','u']],
+ calc:(v,F)=>{need(v.i>0,'La cantidad inicial debe ser mayor que cero.');return{t:'Merma',big:F.p((v.i-v.f)/v.i*100),rows:[['Merma',F.x(v.i-v.f)]],why:'Parte del material inicial que no llegó al final.'}},
+ fm:'Merma = Inicial − Final;  Merma % = Merma / Inicial × 100',as:'Se mide en la misma unidad al inicio y al final.',ex:'200 → 180: merma 20, 10 %.'},
+{id:'concreto',cat:'con',name:'Calculadora de concreto',d:'Volumen de concreto para una losa o fundición.',kw:'concreto volumen losa m3',f:[['l','Largo (m)','m'],['a','Ancho (m)','m'],['e','Espesor (m)','m'],['w','Desperdicio %','%','o']],
+ calc:(v,F)=>{need(v.l>0&&v.a>0&&v.e>0,'Largo, ancho y espesor deben ser mayores que cero.');const b=v.l*v.a*v.e;return{t:'Volumen de concreto',big:F.x(b*(1+v.w/100),3)+' m³',rows:[['Sin desperdicio',F.x(b,3)+' m³']],why:'Estimación matemática; no sustituye planos ni cálculo estructural.'}},
+ fm:'Volumen = Largo × Ancho × Espesor × (1 + Desperdicio/100)',as:'Forma rectangular; el desperdicio lo defines tú.',ex:'5 × 4 × 0,1 = 2 m³.'},
+{id:'combustible',cat:'log',name:'Calculadora de combustible para viajes',d:'Litros y costo de un recorrido.',kw:'combustible viaje gasolina litros costo',f:[['d','Distancia (km)','km'],['r','Rendimiento (km/L)','km/L'],['p','Precio por litro','$']],
+ calc:(v,F)=>{need(v.r>0,'El rendimiento debe ser mayor que cero.');const l=v.d/v.r;return{t:'Combustible necesario',big:F.x(l)+' L',rows:[['Costo total',F.m(l*v.p)],['Costo por km',F.m(v.d>0?l*v.p/v.d:0)]],why:'Consumo estimado con rendimiento constante.'}},
+ fm:'Litros = Distancia / Rendimiento;  Costo = Litros × Precio',as:'Rendimiento y precio constantes.',ex:'300 km a 12 km/L = 25 L.'},
+{id:'electrico',cat:'ene',name:'Calculadora de costo de electricidad',d:'Consumo y costo de un equipo.',kw:'consumo eléctrico kwh costo energía equipos',f:[['w','Potencia (W)','W'],['h','Horas de uso por día','h'],['d','Días','d'],['p','Precio por kWh','$']],
+ calc:(v,F)=>{const k=v.w*v.h*v.d/1000;return{t:'Consumo eléctrico',big:F.x(k)+' kWh',rows:[['Costo',F.m(k*v.p)]],why:'Energía consumida en el período indicado.'}},
+ fm:'kWh = W × horas / 1000;  Costo = kWh × Precio',as:'Potencia constante mientras el equipo está encendido.',ex:'100 W × 10 h × 30 d = 30 kWh.'},
+{id:'rendimiento-ha',cat:'agr',name:'Calculadora de rendimiento por hectárea',d:'Producción por hectárea cultivada.',kw:'rendimiento hectárea producción agrícola',f:[['p','Producción total','kg'],['s','Superficie (ha)','ha']],
+ calc:(v,F)=>{need(v.s>0,'La superficie debe ser mayor que cero.');return{t:'Rendimiento',big:F.x(v.p/v.s)+' /ha',rows:[],why:'Producción obtenida en cada hectárea.'}},
+ fm:'Rendimiento = Producción / Superficie',as:'Misma unidad de producción en todo el cálculo.',ex:'5000 kg en 2 ha = 2500 kg/ha.'},
+{id:'compuesto',cat:'fin',name:'Calculadora de interés compuesto',d:'Valor futuro con reinversión de intereses.',kw:'interés compuesto valor futuro ahorro',f:[['p','Capital inicial','$'],['r','Tasa por período %','%'],['n','Períodos','#']],
+ calc:(v,F)=>{need(v.n>=0,'Los períodos no pueden ser negativos.');const fv=v.p*Math.pow(1+v.r/100,v.n);return{t:'Valor futuro',big:F.m(fv),rows:[['Intereses ganados',F.m(fv-v.p)]],why:'Capital más intereses acumulados.'}},
+ fm:'FV = PV × (1 + r)^n',as:'Tasa constante; la tasa y los períodos usan la misma frecuencia.',ex:'1000 al 10 % por 2 períodos = 1210.'},
+{id:'inflacion',cat:'fin',name:'Calculadora de inflación',d:'Valor futuro ajustado por inflación.',kw:'inflación precios valor futuro',f:[['p','Valor actual','$'],['r','Tasa de inflación %','%'],['n','Períodos','#']],
+ calc:(v,F)=>({t:'Valor con inflación',big:F.m(v.p*Math.pow(1+v.r/100,v.n)),rows:[],why:'Lo que costaría hoy lo mismo en el futuro con esa inflación.'}),
+ fm:'Valor futuro = Valor actual × (1 + tasa)^n',as:'La tasa la introduces tú; no se usa ningún dato oficial.',ex:'100 al 5 % por 2 períodos = 110,25.'},
+{id:'prestamo',cat:'fin',name:'Calculadora de cuota de préstamo y amortización',d:'Cuota fija y tabla de amortización.',kw:'préstamo cuota amortización crédito',f:[['p','Monto del préstamo','$'],['r','Tasa por período %','%'],['n','Número de cuotas','#']],
+ calc:(v,F)=>{need(v.n>=1&&Number.isInteger(v.n)&&v.n<=600,'Las cuotas deben ser un entero entre 1 y 600.');const r=v.r/100,q=r===0?v.p/v.n:v.p*r*Math.pow(1+r,v.n)/(Math.pow(1+r,v.n)-1);let s=v.p,h='<tr><th>#</th><th>Interés</th><th>Capital</th><th>Saldo</th></tr>';for(let i=1;i<=v.n;i++){const it=s*r,cp=q-it;s=Math.max(0,s-cp);h+=`<tr><td>${i}</td><td>${F.m(it)}</td><td>${F.m(cp)}</td><td>${F.m(s<1e-6?0:s)}</td></tr>`}return{t:'Cuota por período',big:F.m(q),rows:[['Total pagado',F.m(q*v.n)],['Intereses totales',F.m(q*v.n-v.p)]],why:'Pago constante en cada período.',table:h}},
+ fm:'PMT = P × r(1+r)^n / ((1+r)^n − 1);  si r = 0, PMT = P / n',as:'Cuotas iguales, tasa constante y pagos al final de cada período.',ex:'1000 al 0 % en 10 cuotas = 100.'}
+];
+const $=s=>document.querySelector(s),app=$('#app');
+const CURS={COP:'es-CO',USD:'en-US',EUR:'de-DE',MXN:'es-MX',ARS:'es-AR',CLP:'es-CL',PEN:'es-PE',BRL:'pt-BR'};
+let cur=localStorage.getItem('qcur')||'USD',favs=JSON.parse(localStorage.getItem('qfav')||'[]'),q='',fc='all';
+const F={m:x=>new Intl.NumberFormat(CURS[cur],{style:'currency',currency:cur,minimumFractionDigits:2,maximumFractionDigits:2}).format(x),p:x=>x.toLocaleString('es',{maximumFractionDigits:2,minimumFractionDigits:2})+' %',x:(x,d=2)=>x.toLocaleString('es',{maximumFractionDigits:d})};
+$('#cur').innerHTML=Object.keys(CURS).map(c=>`<option ${c===cur?'selected':''}>${c}</option>`).join('');
+$('#cur').onchange=e=>{cur=e.target.value;localStorage.setItem('qcur',cur);route()};
+$('#th').onclick=()=>{const d=document.documentElement,dark=getComputedStyle(d).getPropertyValue('--bg').trim()==='#0e1524';const t=dark?'light':'dark';d.dataset.theme=t;localStorage.setItem('qth',t)};
+if(localStorage.getItem('qth'))document.documentElement.dataset.theme=localStorage.getItem('qth');
+const ad='<div class="ad">Espacio publicitario</div>';
+const cardC=c=>`<a class="card" href="#calc-${c.id}"><span>${CATS[c.cat][0]}</span><h3>${c.name}</h3><p>${c.d}</p></a>`;
+const list=()=>{const t=q.toLowerCase();return C.filter(c=>(fc==='all'||c.cat===fc)&&(!t||(c.name+c.d+c.kw+CATS[c.cat][1]).toLowerCase().includes(t)))};
+function filt(){const r=list();$('#res').innerHTML=r.length?r.map(cardC).join(''):'<p>No encontramos calculadoras para tu búsqueda.</p>'}
+function home(all){app.innerHTML=`${all?'':`<section class="hero"><p class="tag">Calcula. Comprende. Decide.</p><h1>Calculadoras útiles para empresas, profesionales e industrias</h1><p>Calcula costos, rentabilidad, productividad, finanzas y mucho más con herramientas claras y fáciles de usar.</p></section>`}
+<label for="q">¿Qué quieres calcular?<input id="q" type="search" placeholder="Ej. ROI, salario, concreto, combustible, préstamo..." value="${q}"></label>
+<div class="chips" role="group" aria-label="Filtrar por categoría"><button class="chip ${fc==='all'?'on':''}" data-c="all">Todas</button>${Object.entries(CATS).map(([k,v])=>`<button class="chip ${fc===k?'on':''}" data-c="${k}">${v[0]} ${v[1]}</button>`).join('')}</div>
+<div class="grid" id="res"></div>${ad}`;filt();$('#q').oninput=e=>{q=e.target.value;filt()};document.querySelectorAll('.chip').forEach(b=>b.onclick=()=>{fc=b.dataset.c;home(all)})}
+function calcView(c){const fv=favs.includes(c.id);const val=id=>document.getElementById('f-'+id);
+app.innerHTML=`<p><a href="#calculadoras">← Todas las calculadoras</a></p><h1>${c.name}</h1><p>${c.d}</p>
+<div class="card"><form id="fm" novalidate>${c.f.map(f=>`<label for="f-${f[0]}">${f[1]}<input id="f-${f[0]}" inputmode="decimal" autocomplete="off"></label>`).join('')}<div style="display:flex;gap:8px;align-items:end;flex-wrap:wrap"><button class="btn p" type="submit">Calcular</button><button class="btn" type="reset" id="cl">Limpiar</button><button class="btn" type="button" id="fv">${fv?'★':'☆'} Favorito</button></div></form></div>
+<div id="out" aria-live="polite"></div>${ad}
+<h2>¿Cómo se calcula?</h2><div class="card"><p><b>Fórmula utilizada:</b> <code>${c.fm}</code></p><p><b>Supuestos del cálculo:</b> ${c.as}</p><p><b>Ejemplo:</b> ${c.ex}</p></div>`;
+$('#cl').onclick=()=>$('#out').innerHTML='';
+$('#fv').onclick=()=>{favs=fv?favs.filter(x=>x!==c.id):[...favs,c.id];localStorage.setItem('qfav',JSON.stringify(favs));calcView(c)};
+$('#fm').onsubmit=e=>{e.preventDefault();const v={};let bad=null;
+c.f.forEach(f=>{const raw=val(f[0]).value.trim().replace(',','.');if(raw===''){if(f[3]==='o')v[f[0]]=0;else bad=`Completa el campo «${f[1]}».`}else if(isNaN(+raw))bad=`«${f[1]}» debe ser un número.`;else v[f[0]]=+raw});
+let r;try{if(bad)throw Error(bad);r=c.calc(v,F);if(Object.values(r).some(x=>x===Infinity)||String(r.big).match(/NaN|Infinity/))throw Error('Revisa los valores: el resultado no se puede calcular.')}catch(x){$('#out').innerHTML=`<div class="card err" role="alert">${x.message}</div>`;return}
+$('#out').innerHTML=`<div class="card res"><h2>${r.t}</h2><div class="big">${r.big}</div>${r.rows.map(a=>`<p>${a[0]}: <b>${a[1]}</b></p>`).join('')}<h3>¿Qué significa?</h3><p>${r.why}</p>${r.table?`<div class="tw"><table>${r.table}</table></div>`:''}</div>`}}
+const page=(t,h)=>app.innerHTML=`<h1>${t}</h1><div class="card">${h}</div>`;
+function route(){const h=location.hash.slice(1)||'inicio';document.title=(h.startsWith('calc-')?(C.find(c=>'calc-'+c.id===h)||{name:'QUANTIVA'}).name+' — ':'')+'QUANTIVA';window.scrollTo(0,0);
+if(h==='inicio')return home(false);if(h==='calculadoras'||h==='categorias')return home(true);
+if(h.startsWith('calc-')){const c=C.find(c=>'calc-'+c.id===h);return c?calcView(c):home(true)}
+if(h==='favoritos'){const r=C.filter(c=>favs.includes(c.id));app.innerHTML=`<h1>Mis calculadoras</h1><div class="grid">${r.length?r.map(cardC).join(''):'<p>Todavía no tienes calculadoras favoritas.</p>'}</div>`;return}
+if(h==='como')return page('Cómo funciona','<ol><li>Elige una calculadora.</li><li>Introduce tus datos.</li><li>Obtén el resultado.</li><li>Comprende la fórmula.</li><li>Utiliza el resultado como referencia.</li></ol>');
+if(h==='faq')return page('Preguntas frecuentes',[['¿Qué es QUANTIVA?','Una plataforma de calculadoras que muestra fórmula y supuestos de cada cálculo.'],['¿Son gratuitas?','Sí. Todo funciona en tu navegador y no se envían datos.'],['¿Las fórmulas son exactas?','Las fórmulas son las estándar indicadas en cada calculadora; el resultado depende de tus datos y supuestos.'],['¿Sustituye a un profesional?','No. En temas legales, tributarios, financieros o de ingeniería consulta a un profesional.'],['¿Las tasas de impuestos son universales?','No. Tú introduces las tasas y valores que correspondan a tu caso.']].map(a=>`<details><summary>${a[0]}</summary><p>${a[1]}</p></details>`).join(''));
+if(h==='contacto')return page('Contacto',`<p>Escríbenos a <b>${EMAIL}</b> (correo de ejemplo, configurable).</p><p>El formulario de contacto requiere configurar posteriormente un servicio de recepción de mensajes.</p>`);
+if(h.startsWith('legal-')){const L={privacidad:['Política de privacidad','QUANTIVA no envía tus datos a ningún servidor. Los cálculos ocurren en tu navegador. Solo se guardan localmente tu tema, moneda y favoritos.'],terminos:['Términos y condiciones','Las herramientas se ofrecen con fines informativos y educativos, sin garantía. Eres responsable del uso de los resultados.'],cookies:['Política de cookies','Este sitio usa almacenamiento local del navegador para tus preferencias. Si se activa publicidad en el futuro, esta política deberá actualizarse.']}[h.slice(6)]||['Legal',''];return page(L[0],`<p>${L[1]}</p>`)}
+home(true)}
+addEventListener('hashchange',route);route();
+</script></body></html>
